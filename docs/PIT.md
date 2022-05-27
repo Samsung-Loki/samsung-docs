@@ -5,10 +5,6 @@ description: Samsung Partition Table Format
 nav_order: 4
 ---
 
-# Warning
-The PIT format is not yet fully documented and most of it's parts are unknown. \
-Also things vary from device to device.
-
 ## Header
 
 | Value        | Argument Type     | Information                   |
@@ -23,7 +19,6 @@ Also things vary from device to device.
 ## Entries
 Entries begin after first 28 bytes. \
 One entry is 132 bytes long.
-
 | Argument Type     | Information                               |
 |:------------------|:------------------------------------------|
 | 32-bit integer    | Binary Type (more info below)             |
@@ -43,23 +38,54 @@ One entry is 132 bytes long.
 * AP/Phone = 0
 * CP/Modem = 1
 
-### Device Types
-* NAND = 1
-* EMMC = 2
-* SPI = 3
-* IDE = 4
-* NANDX16 = 5
-* NOR = 6
-* NANDWB1 = 7
-* UFS = 8
+### Version 1
+Old PIT version, the way to detect is not very accurate. \
+It is v2 if all block sizes are the same, v1 otherwise.
 
-### Attributes
+#### Device Types
+* ONENAND = 0
+* NAND = 1
+* MOVINAND = 2
+
+#### Attributes
 * Read-Only = 0
 * Read-Write = 1
 * STL = 2
 
-### Update Attributes
+#### Update Attributes
 * None = 0
 * FOTA = 1
 * Secure = 2
 * FOTA Secure = 3
+
+### Version 2
+New PIT version, the way to detect is not very accurate. \
+It is v2 if all block sizes are the same, v1 otherwise.
+
+#### Device Types
+* ONENAND = 0
+* NAND = 1
+* EMMC = 2
+* SPI = 3
+* IDE = 4
+* NAND X16 = 5
+
+#### Attributes
+* NONE = 0
+* BCT = 1
+* BOOTLOADER = 2
+* PARTITION TABLE = 3
+* NVDATA = 4
+* DATA = 5
+* MBR = 6
+* EBR = 7
+* GP1 = 8
+* GP1 = 9
+
+#### Update Attributes
+* NONE = 0
+* BASIC = 1
+* ENHANCED = 2
+* EXT2 = 3
+* YAFFS2 = 4
+* EXT4 = 5
