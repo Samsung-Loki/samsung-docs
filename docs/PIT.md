@@ -26,13 +26,13 @@ One entry is 132 bytes long.
 | 32-bit integer    | Partition Identifier                       |
 | 32-bit integer    | Attributes (flags)                         |
 | 32-bit integer    | Update attibutes (flags)                   |
-| 32-bit integer    | Block size (usually 512 bytes)            |
-| 32-bit integer    | Count of blocks                           |
+| 32-bit integer    | Block size or Start Block                 |
+| 32-bit integer    | Block Count or Block Number               |
 | 32-bit integer    | File Offset (also seems to be obsolete)    |
 | 32-bit integer    | File Size (is obsolete, nowadays is zero) |
 | String, 8 bytes   | Partition Name                            |
 | String, 8 bytes   | File Name                                 |
-| String, 8 bytes   | FOTA Name (only for 'remainder')          |
+| String, 8 bytes   | Delta (FOTA) Name (only for 'remainder')  |
 
 ### Binary Types
 * AP/Phone = 0
