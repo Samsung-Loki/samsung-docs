@@ -28,12 +28,12 @@ One entry is 132 bytes long.
 |:------------------|:------------------------------------------|
 | 32-bit integer    | Binary Type (more info below)             |
 | 32-bit integer    | Device Type (more info below)             |
-| 32-bit integer    | Partition Identifier                      |
-| 32-bit integer    | Attributes (flags)                        |
-| 32-bit integer    | Update attibutes (flags)                  |
+| 32-bit integer    | Partition Identifier                       |
+| 32-bit integer    | Attributes (flags)                         |
+| 32-bit integer    | Update attibutes (flags)                   |
 | 32-bit integer    | Block size (usually 512 bytes)            |
 | 32-bit integer    | Count of blocks                           |
-| 32-bit integer    | File Offset (also seems to be obsolete)   |
+| 32-bit integer    | File Offset (also seems to be obsolete)    |
 | 32-bit integer    | File Size (is obsolete, nowadays is zero) |
 | String, 8 bytes   | Partition Name                            |
 | String, 8 bytes   | File Name                                 |
@@ -56,7 +56,7 @@ One entry is 132 bytes long.
 ### Attributes
 * Read-Only = 0
 * Read-Write = 1
-* STL = 3
+* STL = 2
 
 ### Update Attributes
 * None = 0
