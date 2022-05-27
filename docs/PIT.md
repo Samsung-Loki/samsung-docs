@@ -19,6 +19,7 @@ nav_order: 4
 ## Entries
 Entries begin after first 28 bytes. \
 One entry is 132 bytes long.
+
 | Argument Type     | Information                               |
 |:------------------|:------------------------------------------|
 | 32-bit integer    | Binary Type (more info below)             |
