@@ -31,9 +31,9 @@ One entry is 132 bytes long.
 | 32-bit integer    | Block Count or Block Number               |
 | 32-bit integer    | File Offset (also seems to be obsolete)    |
 | 32-bit integer    | File Size (is obsolete, nowadays is zero) |
-| String, 8 bytes   | Partition Name                            |
-| String, 8 bytes   | File Name                                 |
-| String, 8 bytes   | Delta (FOTA) Name (only for 'remainder')  |
+| String, 32 bytes  | Partition Name                            |
+| String, 32 bytes  | File Name                                 |
+| String, 32 bytes  | Delta (FOTA) Name (only for 'remainder')  |
 
 ### Binary Types
 * AP/Phone = 0
