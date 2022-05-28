@@ -13,8 +13,7 @@ nav_order: 4
 | dynamic      | 32-bit integer    | Count of partitions           |
 | COM_TAR2     | String, 8 bytes   | GANG Name                     |
 | dynamic      | String, 8 bytes   | Project Name                  |
-| dynamic      | 32-bit integer    | Protocol Version or LUN count |
-| dynamic      | Array of entries  | Self-explanatory              |
+| dynamic      | 32-bit integer    | Unknown                       |
 
 ## Entries
 Entries begin after first 28 bytes. \
@@ -25,10 +24,10 @@ One entry is 132 bytes long.
 | 32-bit integer    | Binary Type (more info below)             |
 | 32-bit integer    | Device Type (more info below)             |
 | 32-bit integer    | Partition Identifier                       |
-| 32-bit integer    | Attributes (flags)                         |
-| 32-bit integer    | Update attibutes (flags)                   |
-| 32-bit integer    | Block size or Start Block                 |
-| 32-bit integer    | Block Count or Block Number               |
+| 32-bit integer    | Attributes (v1) or Partition Type (v2)    |
+| 32-bit integer    | Update Attibutes (v1) or File System (v2) |
+| 32-bit integer    | Block Size (v1) or Start Block (v2)       |
+| 32-bit integer    | Block Count (v1) or Block Number (v2)     |
 | 32-bit integer    | File Offset (also seems to be obsolete)    |
 | 32-bit integer    | File Size (is obsolete, nowadays is zero) |
 | String, 32 bytes  | Partition Name                            |
@@ -40,8 +39,8 @@ One entry is 132 bytes long.
 * CP/Modem = 1
 
 ### Version 1
-Old PIT version, the way to detect is not very accurate. \
-It is v2 if all block sizes are the same, v1 otherwise.
+Old PIT version, the way to detect is very simple and logical. \
+It is v2 if all block sizes aren't the same, v1 otherwise.
 
 #### Device Types
 * ONENAND = 0
