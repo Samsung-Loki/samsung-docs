@@ -20,7 +20,7 @@ search:
 
 heading_anchors: true
 aux_links:
-  "Hreidmar": "//github.com/Samsung-Loki/Hreidmar"
+  "Thor": "//github.com/Samsung-Loki/Thor"
   "Syndical": "//github.com/Samsung-Loki/Syndical"
 
 aux_links_new_tab: false
