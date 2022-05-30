@@ -55,8 +55,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-### Device Type (or Reset Timer)
-May always return zero. \
+### Flash count reset
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -69,7 +68,7 @@ Response:
 | Value        | Argument Type     | Information                                 |
 |:-------------|:------------------|:--------------------------------------------|
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
-| dynamic      | 32-bit integer    | Device's type.                              |
+| dynamic      | 32-bit integer    | Status code                                 |
 
 ### Erase userdata partition
 **WARNING!** This will do a factory reset. \
@@ -105,8 +104,10 @@ Response:
 
 ### OEM State **(Unknown)**
 `0x64(Session) 0x03(OEM State)`
+
 ### No OEM check **(Unknown)**
 `0x64(Session) 0x04(No OEM Check)`
+
 ### Enable T-Flash
 Request:
 
@@ -138,7 +139,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-### Enable RTN config on boot
+### Enable RTN config (make device refurbished?)
 Request:
 
 | Value        | Argument Type     | Information                |
