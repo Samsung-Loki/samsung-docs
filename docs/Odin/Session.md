@@ -89,11 +89,11 @@ Response:
 ### Set Total Bytes
 Request:
 
-| Value        | Argument Type     | Information                |
-|:-------------|:------------------|:---------------------------|
-| 0x64         | 32-bit integer    | Packet type                |
-| 0x02         | 32-bit integer    | Packet's command           |
-| dynamic      | 32-bit integer    | Total length, in bytes     |
+| Value        | Argument Type           | Information                |
+|:-------------|:------------------------|:---------------------------|
+| 0x64         | 32-bit integer          | Packet type                |
+| 0x02         | 32-bit integer          | Packet's command           |
+| dynamic      | unsigned 32-bit integer | Total length, in bytes     |
 
 Response:
 
