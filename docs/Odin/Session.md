@@ -21,7 +21,7 @@ Response:
 | Value        | Argument Type     | Information                                 |
 |:-------------|:------------------|:--------------------------------------------|
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
-| dynamic      | 32-bit integer    | The protocol version, modified              |
+| dynamic      | 32-bit integer    | The protocol version, modified               |
 
 The modified version would be:
 * If the `<Protocol Version>` is 0, would return `0x20000`
@@ -61,7 +61,7 @@ Request:
 |:-------------|:------------------------|:---------------------------|
 | 0x64         | 32-bit integer          | Packet type                |
 | 0x02         | 32-bit integer          | Packet's command           |
-| dynamic      | unsigned 32-bit integer | Total length, in bytes     |
+| dynamic      | 64-bit integer          | Total length, in bytes     |
 
 Response:
 
