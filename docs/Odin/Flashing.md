@@ -29,13 +29,17 @@ nav_order: 4
 8) Repeat until the end of the file
 
 ## Documentation
+If you see something like `0x00/0x05`, it means that you should \
+use the first one for uncompressed data, and the second one for \
+LZ4 compressed data. A lot easier than manual decompressing.
+
 ### Request file flash
 Request:
 
-| Value        | Argument Type     | Information        |
-|:-------------|:------------------|:-------------------|
-| 0x66         | 32-bit integer    | Packet type        |
-| 0x00         | 32-bit integer    | Packet's command   |
+| Value        | Argument Type     | Information       |
+|:-------------|:------------------|:------------------|
+| 0x66         | 32-bit integer    | Packet type       |
+| 0x00/0x05    | 32-bit integer    | Packet's command. |
 
 Response:
 
@@ -50,7 +54,7 @@ Request:
 | Value        | Argument Type     | Information        |
 |:-------------|:------------------|:-------------------|
 | 0x66         | 32-bit integer    | Packet type        |
-| 0x02         | 32-bit integer    | Packet's command   |
+| 0x02/0x06    | 32-bit integer    | Packet's command   |
 | dynamic      | 32-bit integer    | Length (in bytes)  |
 
 Response:
@@ -82,7 +86,7 @@ Request:
 | Value        | Argument Type     | Information                 |
 |:-------------|:------------------|:----------------------------|
 | 0x66         | 32-bit integer    | Packet type                 |
-| 0x03         | 32-bit integer    | Packet's command            |
+| 0x03/0x07    | 32-bit integer    | Packet's command            |
 | 0x01         | 32-bit integer    | Modem/CP                    |
 | dynamic      | 32-bit integer    | Sequence byte length        |
 | 0x00         | 32-bit integer    | Unknown                     |
