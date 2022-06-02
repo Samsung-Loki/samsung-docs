@@ -39,22 +39,6 @@ If it's not the case, we can safely change the values:
 * File transfer max sequence size: 30 (Packets)
 * Set File Part size to 0x100000
 
-### Set File Part size
-Request:
-
-| Value        | Argument Type     | Information                |
-|:-------------|:------------------|:---------------------------|
-| 0x64         | 32-bit integer    | Packet type                |
-| 0x05         | 32-bit integer    | Packet's command           |
-| dynamic      | 32-bit integer    | File part size (in bytes)  |
-
-Response:
-
-| Value        | Argument Type     | Information                                 |
-|:-------------|:------------------|:--------------------------------------------|
-| 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
-| 0x00         | 32-bit integer    | Status code. Is always zero.                |
-
 ### Flash count reset
 Request:
 
@@ -69,22 +53,6 @@ Response:
 |:-------------|:------------------|:--------------------------------------------|
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | dynamic      | 32-bit integer    | Status code                                 |
-
-### Erase userdata partition
-**WARNING!** This will do a factory reset. \
-Request:
-
-| Value        | Argument Type     | Information                |
-|:-------------|:------------------|:---------------------------|
-| 0x64         | 32-bit integer    | Packet type                |
-| 0x07         | 32-bit integer    | Packet's command           |
-
-Response:
-
-| Value        | Argument Type     | Information                                 |
-|:-------------|:------------------|:--------------------------------------------|
-| 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
-| dynamic      | 32-bit integer    | Status code of the Erase function           |
 
 ### Set Total Bytes
 Request:
@@ -107,6 +75,39 @@ Response:
 
 ### No OEM check **(Unknown)**
 `0x64(Session) 0x04(No OEM Check)`
+
+### Set File Part size
+Request:
+
+| Value        | Argument Type     | Information                |
+|:-------------|:------------------|:---------------------------|
+| 0x64         | 32-bit integer    | Packet type                |
+| 0x05         | 32-bit integer    | Packet's command           |
+| dynamic      | 32-bit integer    | File part size (in bytes)  |
+
+Response:
+
+| Value        | Argument Type     | Information                                 |
+|:-------------|:------------------|:--------------------------------------------|
+| 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
+| 0x00         | 32-bit integer    | Status code. Is always zero.                |
+
+### Erase userdata partition
+**WARNING!** This will do a factory reset. \
+Referenced as `NAND Erase All` in Odin. \
+Request:
+
+| Value        | Argument Type     | Information                |
+|:-------------|:------------------|:---------------------------|
+| 0x64         | 32-bit integer    | Packet type                |
+| 0x07         | 32-bit integer    | Packet's command           |
+
+Response:
+
+| Value        | Argument Type     | Information                                 |
+|:-------------|:------------------|:--------------------------------------------|
+| 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
+| dynamic      | 32-bit integer    | Status code of the Erase function           |
 
 ### Enable T-Flash
 Request:
