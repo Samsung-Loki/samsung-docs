@@ -30,14 +30,17 @@ The modified version would be:
 * In other cases it would return:
     * `(<Bootloader Protocol Version> << 16) | 0x0`
 
-(In a nutshell, `0x04` would be `0x40000`)
-
-Devices that do not support changing the packet size, send zero instead (according to Heimdall) \
+(In a nutshell, `4` would be `0x40000`)
+Devices that do not support changing the packet size, send zero instead. \
+Consider it as a worst case scenario - Odin protocol version 1.
 If it's not the case, we can safely change the values:
 * Read/Write timeout for file transfer: 120000 (2 minutes)
 * Packet size for file transfer: 1048576 (1 MiB)
 * File transfer max sequence size: 30 (Packets)
-* Set File Part size to 0x100000
+
+Also, you can send raw LZ4 compressed data to the phone!
+If it is supported, it would return 0x4**8**000 with the example above.
+Basically, it is a bitwise-or with `0x8000`.
 
 ### Flash count reset
 Request:
