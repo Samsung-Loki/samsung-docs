@@ -107,7 +107,7 @@ Request:
 | Value        | Argument Type             | Information                 |
 |:-------------|:--------------------------|:----------------------------|
 | 0x66         | 32-bit integer            | Packet type                 |
-| 0x03         | 32-bit integer            | Packet's command            |
+| 0x03/0x07    | 32-bit integer            | Packet's command            |
 | 0x00         | 32-bit integer            | Phone/AP                    |
 | dynamic      | 32-bit integer            | Sequence byte length        |
 | 0x00         | 32-bit integer            | Unknown                     |
