@@ -5,7 +5,7 @@ description: Samsung Partition Table Format
 nav_order: 4
 ---
 
-## Header
+<h2>Header <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h2>
 
 | Value        | Argument Type     | Information                   |
 |:-------------|:------------------|:------------------------------|
@@ -15,7 +15,7 @@ nav_order: 4
 | dynamic      | String, 8 bytes   | Project Name                  |
 | dynamic      | 32-bit integer    | Unknown                       |
 
-## Entries
+<h2>Entries <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h2>
 Entries begin after first 28 bytes. \
 One entry is 132 bytes long.
 
@@ -38,7 +38,7 @@ One entry is 132 bytes long.
 * AP/Phone = 0
 * CP/Modem = 1
 
-### Version 1
+<h3>Version 1 <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Old PIT version, the way to detect is very simple and logical. \
 It is v2 if all block sizes aren't the same, v1 otherwise.
 
@@ -58,8 +58,8 @@ It is v2 if all block sizes aren't the same, v1 otherwise.
 * Secure = 2
 * FOTA Secure = 3
 
-### Version 2
-New PIT version, the way to detect is not very accurate. \
+<h3>Version 2 <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+Old PIT version, the way to detect is very simple and logical. \
 It is v2 if all block sizes are the same, v1 otherwise.
 
 #### Device Types

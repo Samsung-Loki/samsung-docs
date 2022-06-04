@@ -8,18 +8,17 @@ nav_order: 3
 
 ## Handshakes
 Before any upload or download can take place, a handshake is done.
-### ODIN
+<h3>ODIN <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Write: `ODIN` \
 Read: `LOKE`
 
-### FPGM
+<h3>FPGM <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
 Does the same thing as the usual ODIN handshake. \
 Write: `FPGM` \
 Read: `OK`
 
-### THOR
+<h3>THOR <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
 It used by the Thor flashing software (newer Odin). \
 Does the same as the usual `ODIN` handshake. \
-Is not actully used by Thor, you should get why. \
 Write: `THOR` \
 Read: `LOKE`

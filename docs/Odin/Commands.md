@@ -6,20 +6,22 @@ parent: Odin
 nav_order: 2
 ---
 
-## Rooting **(Inaccurate)**
+<h2>Rooting <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h2>
+It is unknown what it does. \
 Write: `ROOTING` \
 Read: `DDI`
 
-## ATQ0 **(Inaccurate)**
+<h2>ATQ0 <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h2>
+It is unknown what it does. \
 Write: `ATQ0` \
 Read: `OKAY`
 
-## RESET
+<h2>RESET <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h2>
 Shuts down the device. \
 Write: `RESET` \
 Read: `+RESET: OK\n`
 
-## PROMPT
+<h2>PROMPT <p style="font-size: 14px !important;" class="label label-red">From leak</p></h2>
 Write: `PROMPT<command>` \
 Read: `<response>`
 
@@ -31,10 +33,8 @@ Command format: `getenv`. No arguments required. \
 Response format: `[Name]: [Value]\n` for each.
 #### Set reboot mode
 Command format: `setenv REBOOT_MODE [value]` \
-Response format: `Should be empty`
+Response format: `Unknown`
 ##### Reboot values
-**WARNING!** Modem Secure Error seems to be impossible to stop. \
-It would render your device unusable because of a security error.
 
 | Name                          | Value | Information               |
 |:------------------------------|:------|:--------------------------|
@@ -62,7 +62,7 @@ It would render your device unusable because of a security error.
 #### Enable/disable upload
 Used mainly to do ramdumps, the way is unknown. \
 Command format: `setenv FORCE_UPLOAD [value]` \
-Response format: `Untested`
+Response format: `Unknown`
 
 ##### Values
 
@@ -73,7 +73,7 @@ Response format: `Untested`
 
 #### Set debug level
 Command format: `setenv DEBUG_LEVEL [value]` \
-Response format: `Untested`
+Response format: `Unknown`
 
 ##### Debug Levels
 
@@ -87,7 +87,7 @@ Response format: `Untested`
 #### Set default cmdline
 Command format: `setenv CMDLINE [value]` \
 Tabs and quotes are not allowed. \
-Response format: `Untested`
+Response format: `Unknown`
 
 ##### Values observed
 
@@ -102,14 +102,14 @@ Command format: `setenv POWER_MARGIN [value]` \
 Values are unknown (not found in bootloader)
 
 #### Save environment data
-Response format: `Untested` \
+Response format: `Unknown` \
 Command format: `saveenv`
 
 #### Restart the device
-Response format: `Untested` \
+Response format: `Unknown` \
 Command format: `reset`
 
-## SECCMD
+<h2>SECCMD <p style="font-size: 14px !important;" class="label label-red">From leak</p></h2>
 Commands:
 ```
 0x01 - Forcefully set the warranty bit
@@ -118,7 +118,7 @@ Commands:
 Write: `SECCMD<command>` \
 Read: `<response>`
 
-## DVIF
+<h2>DVIF <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h2>
 Write: `DVIF` \
 Read: 
 ```

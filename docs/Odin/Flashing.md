@@ -29,11 +29,12 @@ nav_order: 4
 8) Repeat until the end of the file
 
 ## Documentation
+<h3>Compressed file transfer <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
 If you see something like `0x00/0x05`, it means that you should \
-use the first one for uncompressed data, and the second one for \
+use the left one for uncompressed data, and the right one for \
 LZ4 compressed data. A lot easier than manual decompressing.
 
-### Request file flash
+<h3>Request file flash <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information       |
@@ -48,7 +49,7 @@ Response:
 | 0x66         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-### Begin file sequence flash
+<h3>Begin file sequence flash <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information        |
@@ -64,7 +65,7 @@ Response:
 | 0x66         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. May not be zero.               |
 
-### Flash a file part
+<h3>Flash a file part <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Send an empty packet for the first file part. \
 Request:
 
@@ -79,7 +80,7 @@ Response:
 | 0x66         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | dynamic      | 32-bit integer    | Current file part index on LOKE's side      |
 
-### End file sequence flash: MODEM
+<h3>End file sequence flash: MODEM <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Send an empty packet before and after. \
 Request:
 
@@ -100,7 +101,7 @@ Response:
 | 0x66         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. May not be zero.               |
 
-### End file sequence flash: PHONE
+<h3>End file sequence flash: PHONE <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
 Send an empty packet before and after. \
 Request:
 
