@@ -23,7 +23,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | dynamic      | 32-bit integer    | The protocol version, modified               |
 
-The modified version would be: <p class="label label-red">From leak</p>
+The modified version would be:
 * If the `<Protocol Version>` is 0, would return `0x20000`
 * If the `<Protocol Version>` is lower than bootloader's,
     * it would return `(<Protocol Version> << 16) | 0x0`
@@ -32,7 +32,7 @@ The modified version would be: <p class="label label-red">From leak</p>
 
 (In a nutshell, `4` would be `0x40000`)
 Devices that do not support changing the packet size, send zero instead. \
-Consider it as a worst case scenario - Odin protocol version 1.
+Consider it as a worst case scenario - Odin protocol version 1. \
 If it's not the case, we can safely change the values:
 * Read/Write timeout for file transfer: 120000 (2 minutes)
 * Packet size for file transfer: 1048576 (1 MiB)
