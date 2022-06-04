@@ -31,6 +31,7 @@ The modified version would be:
     * `(<Bootloader Protocol Version> << 16) | 0x0`
 
 (In a nutshell, `4` would be `0x40000`)
+
 Devices that do not support changing the packet size, send zero instead. \
 Consider it as a worst case scenario - Odin protocol version 1. \
 If it's not the case, we can safely change the values:
