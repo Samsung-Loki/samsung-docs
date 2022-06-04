@@ -2,6 +2,7 @@ remote_theme: pmarsceill/just-the-docs
 
 title: Samsung Docs
 description: Documentation for all Samsung's stuff
+color_scheme: dark
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
