@@ -7,7 +7,7 @@ nav_order: 1
 ---
 
 ## Format
-<h3>Header <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Header <p class="label label-red">From leak</p></h3>
 
 | Argument Type      | Value      | Information           |
 |:-------------------|:-----------|:----------------------|
@@ -16,7 +16,7 @@ nav_order: 1
 | Array of Location  | dynamic    | Self-explanatory      |
 | Array of Data      | dynamic    | Self-explanatory      |
 
-<h3>Location Structure <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Location Structure <p class="label label-red">From leak</p></h3>
 
 | Argument Type     | Information           |
 |:------------------|:----------------------|
@@ -24,7 +24,7 @@ nav_order: 1
 | 32-bit integer    | Offset, in bytes      |
 | 32-bit integer    | Size, in bytes        |
 
-<h3>Data Structure <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Data Structure <p class="label label-red">From leak</p></h3>
 
 | Argument Type     | Information           |
 |:------------------|:----------------------|
@@ -32,7 +32,7 @@ nav_order: 1
 | 32-bit integer    | Size, in bytes        |
 | Raw byte buffer   | DevInfo data          |
 
-<h3>DevInfo Types <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>DevInfo Types <p class="label label-red">From leak</p></h3>
 
 | Name                      | Value | Information  |
 |:--------------------------|:------|:-------------|
@@ -43,8 +43,7 @@ nav_order: 1
 
 
 ## Packets
-
-<h3>Dump Device Info <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Dump Device Info <p class="label label-red">From leak</p></h3>
 Request:
 
 | Value        | Argument Type     | Information        |
@@ -59,7 +58,7 @@ Response:
 | 0x69         | 32-bit integer    | Packet type, would be 0xFF on failure          |
 | dynamic      | 32-bit integer    | Size of the DevInfo. Usually it is 500 bytes   |
 
-<h3>Dump a block <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Dump a block <p class="label label-red">From leak</p></h3>
 A block is 500 bytes. \
 Request:
 
@@ -75,7 +74,7 @@ Response:
 |:-------------|:------------------|:---------------------|
 | dynamic      | Raw byte buffer   | Block's data buffer  |
 
-<h3>End dump <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>End dump <p class="label label-red">From leak</p></h3>
 Request:
 
 | Value        | Argument Type     | Information        |

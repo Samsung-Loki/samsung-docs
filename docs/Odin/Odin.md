@@ -13,9 +13,3 @@ Warning: Thor is currently in development, so please use Odin or Heimdall for no
 
 ## Important information
 All non-flash packets should be sent with buffer length 1024, else the packet will be rejected.
-
-## About labels
-All packets are labeled:
-1) Reverse-Engineered: Newly discovered stuff by reverse-engineering the `aboot.mbn` (TheAirBlow) \
-2) Old knowledge: Stuff discovered a while back ago by Benjamin Dobell \
-3) From leak: Information that was gathered from the Samsung leak

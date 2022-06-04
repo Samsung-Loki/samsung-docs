@@ -9,7 +9,7 @@ nav_order: 2
 If you just wanna to download Samsung's firmware from their official servers, click Syndical button below. \
 It is an implementation of this protocol, tested by TheAirBlow.
 
-## Authentication
+<h2>Authentication <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h2>
 Headers:
 ```
 Authorization: FUS nonce="encrypted_nonce", signature="nonce_to_token", nc="", type="", realm="", newauth="1"
@@ -53,7 +53,7 @@ Input 2: LOGIC_VALUE_FACTORY data value for BINARY_NATURE = 1, LOGIC_VALUE_HOME 
 ```
 * Get it's MD5 hashsum
 
-## Endpoints
+<h2>Endpoints <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h2>
 ### http://cloud-neofussvr.sslcs.cdngc.net/
 #### NF_DownloadBinaryForMass.do
 Query paramaters: `?file=<path><filename>`. \

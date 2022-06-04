@@ -7,7 +7,7 @@ nav_order: 5
 ---
 
 ## Packets
-<h3>Begin Session <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>Begin Session <p class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                                          |
@@ -42,7 +42,7 @@ Also, you can send raw LZ4 compressed data to the phone!
 If it is supported, it would return 0x4**8**000 with the example above.
 Basically, it is a bitwise-or with `0x8000`.
 
-<h3>Flash count reset <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
+<h3>Flash count reset <p class="label label-green">Reverse-Engineered</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -57,7 +57,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | dynamic      | 32-bit integer    | Status code                                 |
 
-<h3>Set Total Bytes <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>Set Total Bytes <p class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type           | Information                |
@@ -73,7 +73,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Set File Part size <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>Set File Part size <p class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -89,7 +89,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Erase userdata partition <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
+<h3>Erase userdata partition <p class="label label-green">Reverse-Engineered</p></h3>
 **WARNING!** This will do a factory reset. \
 Referenced as `NAND Erase All` in Odin. \
 Request:
@@ -106,7 +106,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | dynamic      | 32-bit integer    | Status code of the Erase function           |
 
-<h3>Enable T-Flash <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>Enable T-Flash <p class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -121,7 +121,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Change device's region code <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
+<h3>Change device's region code <p class="label label-green">Reverse-Engineered</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -137,7 +137,7 @@ Response:
 | 0x64         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Enable RTN kernel flag <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Enable RTN kernel flag <p class="label label-red">From leak</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -153,7 +153,7 @@ Response:
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
 ## End Session (0x67)
-<h3>End Session <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>End Session <p class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -168,7 +168,7 @@ Response:
 | 0x67         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Reboot <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>Reboot <p class="label label-yellow">Old knowledge</p></h3>
 Request:
 
 | Value        | Argument Type     | Information                |
@@ -183,7 +183,7 @@ Response:
 | 0x67         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Reboot into Odin <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
+<h3>Reboot into Odin <p class="label label-green">Reverse-Engineered</p></h3>
 Reboots and sends you back into download mode. \
 Request:
 
@@ -199,7 +199,7 @@ Response:
 | 0x67         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h3>Shutdown <p style="font-size: 14px !important;" class="label label-green">Reverse-Engineered</p></h3>
+<h3>Shutdown <p class="label label-green">Reverse-Engineered</p></h3>
 This command is unsupported on some devices. \
 Request:
 

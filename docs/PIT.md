@@ -38,7 +38,7 @@ One entry is 132 bytes long.
 * AP/Phone = 0
 * CP/Modem = 1
 
-<h3>Version 1 <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h3>
+<h3>Version 1 <p class="label label-yellow">Old knowledge</p></h3>
 Old PIT version, the way to detect is very simple and logical. \
 It is v2 if all block sizes aren't the same, v1 otherwise.
 
@@ -58,7 +58,7 @@ It is v2 if all block sizes aren't the same, v1 otherwise.
 * Secure = 2
 * FOTA Secure = 3
 
-<h3>Version 2 <p style="font-size: 14px !important;" class="label label-red">From leak</p></h3>
+<h3>Version 2 <p class="label label-red">From leak</p></h3>
 Old PIT version, the way to detect is very simple and logical. \
 It is v2 if all block sizes are the same, v1 otherwise.
 

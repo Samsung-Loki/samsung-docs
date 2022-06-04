@@ -22,7 +22,7 @@ nav_order: 6
 
 ## Packets
 ### Flashing
-<h4>Request PIT flash <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>Request PIT flash <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 Request:
 
 | Value        | Argument Type     | Information                 |
@@ -37,7 +37,7 @@ Response:
 | 0x65         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h4>Begin PIT flash <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>Begin PIT flash <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 Request:
 
 | Value        | Argument Type     | Information                 |
@@ -53,7 +53,7 @@ Response:
 | 0x65         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h4>Send PIT data <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>Send PIT data <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 Request:
 
 | Value        | Argument Type     | Information                 |
@@ -67,7 +67,7 @@ Response:
 | 0x65         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
-<h4>End PIT Flash <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>End PIT Flash <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 Request:
 
 | Value        | Argument Type     | Information                 |
@@ -83,7 +83,7 @@ Response:
 | 0x00         | 32-bit integer    | Status code. Is always zero.                |
 
 ### Dumping
-<h4>Request PIT data dump <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>Request PIT data dump <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 Request:
 
 | Value        | Argument Type     | Information                 |
@@ -98,7 +98,7 @@ Response:
 | 0x65         | 32-bit integer    | Packet type, would be 0xFF on failure       |
 | dynamic      | 32-bit integer    | PIT file size. Ususally it is 0x4000        |
 
-<h4>Dump PIT data block <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>Dump PIT data block <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 One block is 500 bytes. Send an empty packet after last block. \
 Request:
 
@@ -114,7 +114,7 @@ Response:
 |:-------------|:------------------|:----------------------------------|
 | dynamic      | Raw byte buffer   | The requested block's data buffer |
 
-<h4>End PIT dump <p style="font-size: 14px !important;" class="label label-yellow">Old knowledge</p></h4>
+<h4>End PIT dump <p style="font-size: 10px !important;" class="label label-yellow">Old knowledge</p></h4>
 Identical to End PIT flash. \
 Request:
 
