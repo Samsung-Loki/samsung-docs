@@ -59,8 +59,8 @@ It is v2 if all block sizes aren't the same, v1 otherwise.
 * FOTA Secure = 3
 
 ### Version 2
-Old PIT version, the way to detect is very simple and logical. \
-It is v2 if all block sizes are the same, v1 otherwise.
+To detect a V2 PIT, check if block sizes don't match. \
+If they don't it is a V2 PIT, V1 otherwise.
 
 #### Device Types
 * ONENAND = 0
