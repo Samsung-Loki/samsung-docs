@@ -70,7 +70,7 @@ If they don't it is a V2 PIT, V1 otherwise.
 * IDE = 4
 * NAND X16 = 5
 
-### Partition Type
+#### Partition Type
 * NONE = 0
 * BCT = 1
 * BOOTLOADER = 2
