@@ -81,18 +81,19 @@ Response:
 | dynamic      | 32-bit integer    | Current file part index on LOKE's side      |
 
 ### End file sequence flash: MODEM
+Last sequence should be 1 for true, 0 for false. \
 Send an empty packet before and after. \
 Request:
 
-| Value        | Argument Type     | Information                 |
-|:-------------|:------------------|:----------------------------|
-| 0x66         | 32-bit integer    | Packet type                 |
-| 0x03/0x07    | 32-bit integer    | Packet's command            |
-| 0x01         | 32-bit integer    | Modem/CP                    |
-| dynamic      | 32-bit integer    | Sequence byte length        |
-| 0x00         | 32-bit integer    | Unknown                     |
-| dynamic      | 32-bit integer    | Device Type (PIT)           |
-| dynamic      | 32-bit integer    | Is last sequence, 0/1 bool  |
+| Value        | Argument Type     | Information           |
+|:-------------|:------------------|:----------------------|
+| 0x66         | 32-bit integer    | Packet type           |
+| 0x03/0x07    | 32-bit integer    | Packet's command      |
+| 0x01         | 32-bit integer    | Modem/CP              |
+| dynamic      | 32-bit integer    | Sequence byte length  |
+| dynamic      | 32-bit integer    | Binary Type (PIT)     |
+| dynamic      | 32-bit integer    | Device Type (PIT)     |
+| dynamic      | 32-bit integer    | Is last sequence      |
 
 Response:
 
@@ -102,19 +103,20 @@ Response:
 | 0x00         | 32-bit integer    | Status code. May not be zero.               |
 
 ### End file sequence flash: PHONE
+Last sequence should be 1 for true, 0 for false. \
 Send an empty packet before and after. \
 Request:
 
-| Value        | Argument Type             | Information                 |
-|:-------------|:--------------------------|:----------------------------|
-| 0x66         | 32-bit integer            | Packet type                 |
-| 0x03/0x07    | 32-bit integer            | Packet's command            |
-| 0x00         | 32-bit integer            | Phone/AP                    |
-| dynamic      | 32-bit integer            | Sequence byte length        |
-| 0x00         | 32-bit integer            | Unknown                     |
-| dynamic      | 32-bit integer            | Device Type (PIT)           |
-| dynamic      | 32-bit integer            | Partition Identifier (PIT)  |
-| dynamic      | 32-bit integer Boolean    | Is last sequence            |
+| Value        | Argument Type  | Information                 |
+|:-------------|:---------------|:----------------------------|
+| 0x66         | 32-bit integer | Packet type                 |
+| 0x03/0x07    | 32-bit integer | Packet's command            |
+| 0x00         | 32-bit integer | Phone/AP                    |
+| dynamic      | 32-bit integer | Sequence byte length        |
+| dynamic      | 32-bit integer | Binary Type (PIT)           |
+| dynamic      | 32-bit integer | Device Type (PIT)           |
+| dynamic      | 32-bit integer | Partition Identifier (PIT)  |
+| dynamic      | 32-bit integer | Is last sequence            |
 
 Response:
 
