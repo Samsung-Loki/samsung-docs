@@ -70,7 +70,7 @@ It is v2 if all block sizes are the same, v1 otherwise.
 * IDE = 4
 * NAND X16 = 5
 
-#### Attributes
+### Partition Type
 * NONE = 0
 * BCT = 1
 * BOOTLOADER = 2
@@ -82,7 +82,7 @@ It is v2 if all block sizes are the same, v1 otherwise.
 * GP1 = 8
 * GP1 = 9
 
-#### Update Attributes
+#### Filesystem
 * NONE = 0
 * BASIC = 1
 * ENHANCED = 2
