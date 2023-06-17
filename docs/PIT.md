@@ -6,6 +6,7 @@ nav_order: 4
 ---
 
 ## Header
+
 | Value        | Argument Type     | Information                   |
 |:-------------|:------------------|:------------------------------|
 | 0x12349876   | 32-bit integer    | Magic Number                  |
